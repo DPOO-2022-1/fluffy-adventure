@@ -5,10 +5,14 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
+import Modelo.aplicacion;
+
 public class VentanaPrincipal extends JFrame {
 	
 	PanelUsuarioActual panelUsuario;
 	PanelAplicacion panelApp;
+	aplicacion app;
+	PanelBotones botones;
 	
 	public VentanaPrincipal() {
 		
@@ -16,12 +20,15 @@ public class VentanaPrincipal extends JFrame {
 		
 		setTitle("Aplicacion");
 		setResizable(false);
-		setSize(new Dimension(600,700));
+		setSize(new Dimension(900,700));
 		
 		// Creacion de paneles
 		
 		panelUsuario = new PanelUsuarioActual();
 		panelApp = new PanelAplicacion();
+		botones = new PanelBotones(panelApp);
+		
+		app = new aplicacion(panelUsuario.DarNombre(), panelUsuario.DarCorreo());
 		
 		// Creacion del Layout
 		
@@ -31,6 +38,7 @@ public class VentanaPrincipal extends JFrame {
 		
 		add(panelUsuario, BorderLayout.NORTH);
 		add(panelApp, BorderLayout.CENTER);
+		add(botones, BorderLayout.SOUTH);
 		
 		// Configuraciones Finales
 		

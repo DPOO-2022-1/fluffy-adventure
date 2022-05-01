@@ -9,15 +9,9 @@ public class aplicacion {
 	private usuario usuarioActual;
 	private proyecto proyectoActual = null;
 	
-	public aplicacion() {
-		System.out.println("-------------------- APP -------------------- ");
+	public aplicacion(String nom, String cor) {
 		
-		System.out.println("Por Favor ingrese sus datos:");
-		
-		String nombre = input("Nombre del usuario: \n");
-		String correo = input("Correo del usuario: \n");
-		
-		this.usuarioActual = new usuario(nombre, correo);
+		this.usuarioActual = new usuario(nom, cor);
 		
 	}
 	
@@ -179,17 +173,6 @@ public class aplicacion {
 	
 	// Propio de la app
 	
-	public static void main(String[] args) {
-		
-		aplicacion aplicacion = new aplicacion();
-		
-		System.out.println("-------------------- MENU -------------------- \n");
-		
-		aplicacion.Menu();
-		
-		// Guardar datos presistencia
-		
-	}
 	
 	private String input(String string) {
 		
@@ -206,5 +189,8 @@ public class aplicacion {
 		}
 		return null;
 	}
+	
+	
+	// ------------------------------------------------Metodos P2
 
 }
