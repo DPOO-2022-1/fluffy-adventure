@@ -120,27 +120,19 @@ public class proyecto {
 		return texto1+texto2+texto3;
 	}
 	
-	public HashMap<String, Integer> darReporteTiempos()
+	public float darReporteTiemposPromedio()
 	{
-		HashMap<String, Integer> mapa = new HashMap<String, Integer>();
-		for(actividad actual: this.actividades) 
-		{
-			Integer tiempoTotal = actual.getHoraTotal();
-			if(mapa.containsKey(actual.getCreador().DarNombre())) 
-			{
-				tiempoTotal+= mapa.get(actual.getCreador().DarNombre());
-				mapa.put(actual.getCreador().DarNombre(), tiempoTotal);
-
-			}
-			else 
-			{
-				mapa.put(actual.getCreador().DarNombre(), tiempoTotal);
-			}
-			
-			
-		}
-		return mapa;
+		Integer n = this.actividades.size();
+		Integer tiempo = 0;
 		
+		for(int x=0 ; x < n ; x++) 
+		{
+			tiempo+=actividades.get(x).getHoraTotal();
+		}
+		
+		float tiempo_promedio= tiempo/n;
+	
+		return tiempo_promedio;
 	}
 	
 }

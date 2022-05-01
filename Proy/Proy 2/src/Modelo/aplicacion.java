@@ -38,6 +38,10 @@ public class aplicacion {
 				
 				crearActividad();
 			} 
+			else if (opcion == 3) {
+				
+				System.out.println("El tiempo promedio por actividad es de: " + this.proyectoActual.darReporteTiemposPromedio());
+			}
 			else if (opcion == 0){
 				
 				continuar = false;
@@ -167,6 +171,8 @@ public class aplicacion {
 		System.out.println("1) Crear nuevo proyecto");
 		
 		System.out.println("2) Agregar una actividad al proyecto actual:");
+		
+		System.out.println("3) Dar tiempo promedio por actividad en el proyecto actual:");
 		
 		System.out.println("0) Cerrar App");
 	}
