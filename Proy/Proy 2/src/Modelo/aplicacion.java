@@ -112,12 +112,24 @@ public class aplicacion {
 		
 	public void agregarUsuarioCon(usuario us) {
 		
+		
+		String nombre = input("Ingrese el nombre del proyecto:\n");
+		
+		
+		
 		proyectoActual.agregarUsuarioSec(us); 
 		
 	}
 	
 	
 	public void crearProyecto() {
+		
+		
+		if(usuarioActual == null) 
+		{
+			System.out.println("*ERROR*\n No hay un proyecto activo, por favor cargue un proyecto o cree uno nuevo para agregar una nueva actividad.");;
+		}
+		else {
 		
 		String nombre = input("Ingrese el nombre del proyecto:\n");
 		String descripcion = input("Ingrese la descripcion del proyecto:\n");
@@ -141,6 +153,7 @@ public class aplicacion {
 			
 		
 		proyectoActual = new proyecto(nombre, descripcion, fechaInicio, fechaFin, tipo, usuarioActual);
+		}
 		
 	}
 	

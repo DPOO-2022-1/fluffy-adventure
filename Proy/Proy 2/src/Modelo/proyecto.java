@@ -25,6 +25,8 @@ public class proyecto {
 		principal = usu;
 		ArrayList<actividad> act= new ArrayList<actividad>();
 		setActividades(act);
+		ArrayList<usuario> usuariosSec = new ArrayList<usuario>();
+		setusuariosSec(usuariosSec);
 	}
 	
 // Get y Set
@@ -91,6 +93,15 @@ public class proyecto {
 		this.actividades = actividades;
 	}
 	
+	public ArrayList<usuario> usuariosSec() {
+		return usuariosSec;
+	}
+
+	public void setusuariosSec(ArrayList<usuario> usuariosSec) {
+		this.usuariosSec = usuariosSec;
+	}
+	
+	
 // Procesos
 	
 	public void agregarActividad(actividad activity) 
@@ -99,6 +110,8 @@ public class proyecto {
 	}
 	
 	public void agregarUsuarioSec(usuario usu) {
+		
+	
 		this.usuariosSec.add(usu);
 	}
 	
