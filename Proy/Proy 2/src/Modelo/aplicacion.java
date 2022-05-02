@@ -112,10 +112,10 @@ public class aplicacion {
 		
 	public void agregarUsuarioCon(usuario us) {
 		
+		String nombre_usu_sec = input("Ingrese el nombre del participante\n");
+		String correo_usu_sec = input("Ingrese el correo del participante\n");
 		
-		String nombre = input("Ingrese el nombre del proyecto:\n");
-		
-		
+		us = new usuario(nombre_usu_sec,correo_usu_sec);
 		
 		proyectoActual.agregarUsuarioSec(us); 
 		
@@ -159,8 +159,8 @@ public class aplicacion {
 	
 	// Metodos Imprimir
 	
-	public void ImprimirInfoUsuario() {
-		System.out.println( usuarioActual.DarInfo() );
+	public String ImprimirInfoUsuario() {
+		return usuarioActual.DarInfo();
 	}
 	
 	public void ImprimirMenu() {

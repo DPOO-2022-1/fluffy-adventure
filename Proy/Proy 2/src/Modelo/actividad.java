@@ -87,8 +87,8 @@ public class actividad {
 			this.fecha_final = fecha;}
 	}
 
-	public usuario getCreador() {
-		return creador;
+	public String getCreador() {
+		return creador.DarNombre();
 	}
 
 	public void setCreador(usuario creador) {
@@ -97,6 +97,11 @@ public class actividad {
 
 	public int getHoraTotal() {
 		return horaTotal;
+	}
+	
+	public String str_getHoraTotal() {
+		
+		return String.valueOf(horaTotal);
 	}
 
 	public void darTiempoTotal(int horaTotal, Boolean stop_contador) {
@@ -116,8 +121,14 @@ public class actividad {
 	public String getHoraParcial() {
 		return horaParcial;
 	}
+	
+public String str_getHoraParcial() {
+		
+		return String.valueOf(horaParcial);
+	}
 
 	public void setHoraParcial(String horaParcial) {
+		
 		this.horaParcial = horaParcial;
 	}
 	

@@ -111,6 +111,8 @@ public class proyecto {
 	
 	public void agregarUsuarioSec(usuario usu) {
 		
+		
+		
 	
 		this.usuariosSec.add(usu);
 	}
