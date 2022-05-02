@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class PanelAplicacion extends JPanel implements ActionListener {
@@ -12,6 +13,7 @@ public class PanelAplicacion extends JPanel implements ActionListener {
 	PanelCrearProyecto pCrearProy;
 	PanelCrearActividad pCrearActividad;
 	CardLayout cardLayout = new CardLayout();
+	String nomProy = "";
 	
 	public PanelAplicacion() {
 		
@@ -41,6 +43,9 @@ public class PanelAplicacion extends JPanel implements ActionListener {
 			cardLayout.show(this, "CrearProy");
 		} else if(e.getActionCommand() == "CrearActividad") {
 			cardLayout.show(this, "CrearActividad");
+		}
+		else if(e.getActionCommand() == "CamProy") {
+			nomProy = JOptionPane.showInputDialog("Cual Proyecto elije: ");
 		}
 		
 	}
