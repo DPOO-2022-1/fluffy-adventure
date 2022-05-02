@@ -102,6 +102,9 @@ public class proyecto {
 	}
 	
 	
+	
+	
+	
 // Procesos
 	
 	public void agregarActividad(actividad activity) 

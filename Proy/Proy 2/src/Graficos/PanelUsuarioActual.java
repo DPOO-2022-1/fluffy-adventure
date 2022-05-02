@@ -1,13 +1,18 @@
 package Graficos;
 
 import javax.swing.JLabel;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import Modelo.proyecto;
 
 public class PanelUsuarioActual extends JPanel {
 	
 	String nombre;
 	String correo;
+	String nombreProy;
+	
 	
 	public PanelUsuarioActual() {
 		
@@ -33,9 +38,13 @@ public class PanelUsuarioActual extends JPanel {
 		return correo;
 	}
 	
+	
+	
 	public String DarInfo(){
 		
-		String texto = "nombre: " + nombre + "\ncorreo: " + correo + "";
+		
+		
+		String texto = "Nombre: " + nombre + "Correo: " + correo + "\nProyecto actual: " + nombre ;
 		
 		return texto;
 	}
