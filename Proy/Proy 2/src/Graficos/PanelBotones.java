@@ -8,7 +8,7 @@ public class PanelBotones extends JPanel {
 	public PanelBotones(PanelAplicacion al) {
 		
 		JButton BotonVerProy = new JButton("Ver proyecto actual");
-		JButton BotonCambiarProy = new JButton("cambiar a otro proyecto");
+		JButton BotonCambiarProy = new JButton("Cambiar a otro proyecto");
 		JButton BotonCrearProy = new JButton("Crear un Proyecto");
 		JButton BotonCrearActividad = new JButton("Crear una actividad");
 
